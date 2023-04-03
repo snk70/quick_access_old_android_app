@@ -1,0 +1,1152 @@
+﻿Version=6.3
+NumberOfModules=17
+Module1=Home_Act
+Module2=Definition_Permissions_ACT
+Module3=Installed_Applications
+Module4=Setting_Parts
+Module5=File_Manager
+Module6=Send_Comment_ACT
+Module7=Contact_ACT
+Module8=check_servis
+Module9=Selected_Contact
+Module10=Help_ACT
+Module11=SearchModule
+Module12=Security_Class_List
+Module13=sizeviewV3
+Module14=Regular_Validations
+Module15=size_View
+Module16=Interchange_stn
+Module17=size_View301
+Build1=Default,Fast_Accessibility.ModernPl
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~AddPermission(android.permission.READ_CONTACTS)~\n~AddPermission(ir.mservices.market.BILLING)~\n~'SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=35
+File1=3.ttf
+File2=belham.ttf
+File3=bg_ground.png
+File4=chat_icon.png
+File5=close-icon.png
+File6=comment_icon.png
+File7=Contact_We_Loyout.bal
+File8=contacts-xxl.png
+File9=DefinitionandRemove_Permission.bal
+File10=doc.png
+File11=envelope.png
+File12=folder.png
+File13=handicon.png
+File14=hands-hand-icon.png
+File15=help.png
+File16=Help_fast_accessibility.html
+File17=help-xxl.png
+File18=home_icon.png
+File19=Home_Screen.bal
+File20=insta_logo.png
+File21=LastPermission_Definition.bal
+File22=list.bal
+File23=loyout_items.bal
+File24=modernplus.png
+File25=music.png
+File26=paste.png
+File27=pay_port_loyout.bal
+File28=Permissions_ACT.bal
+File29=pic.png
+File30=Select_Contact_lv.bal
+File31=send_comment_loyout.bal
+File32=SlideMenu_Loyout.bal
+File33=strip_icon.png
+File34=t_logo.png
+File35=Thumbs.db
+NumberOfLibraries=11
+Library1=core
+Library2=slidingmenuwrapper
+Library3=phone
+Library4=dialogs
+Library5=clipboard
+Library6=ariafile
+Library7=httputils2
+Library8=checksignature
+Library9=encryption
+Library10=securityinbilling
+Library11=myketiap
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: دسترسی سه سوته
+	#VersionCode: 1
+	#VersionName: main
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	Dim ht As HttpJob
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	Dim ch_sign As CheckSignature
+'''''''''''''''''''''''''''
+End Sub
+
+
+
+Sub Globals
+	Dim edu_CLip As String="http://modernplus.ir/posts/Fast_Accessibility/fast_accessibility.mp4"
+	Dim p_Key As String="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCgVJAyPzXRMabeFQv0YgQWkdZs65KiHVjvUAjKn9/9DfLAaHxytWJCbU3LnM/xn8UQ+QffGi4XDMRm2hQyCbn9wBRGqQwaWNply966lGWE7UaCAwmBo7iWNwo2psfedDyWNVRjT3dm9g4Srjmkn22+GCok8eEfSXZvDICN7I6mPQIDAQAB"
+	Dim P_ID As String="fast_accessibility_app_1396"
+	Dim b_mark As BillingManager3
+	''''''''''''''''''''''''''''''''''''''''''
+
+	''''''''''''''''''''''''''''''''''''''''''
+	Dim lng As Int
+	Dim rn As Int
+	Dim clp As BClipboard
+	Dim Hardware_licence,Software_licence As String
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	Private Software_TXT As EditText
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	Private lbl_1 As Label
+	Private btn_buy As Button
+	Private btn_Exit As Button
+	Private lbl_2 As Label
+	Private btn_demo As Button
+	Private btn_clip As Button
+	
+End Sub
+
+
+Sub Activity_Create(FirstTime As Boolean)
+					
+	If Rnd(0,10)=0 Then
+		StartService(check_servis)
+	End If
+	'''''''''''''''''''''''''''''''''''''''''''''''
+				
+	If File.Exists(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)=False And File.Exists(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)=False Then
+
+		'Load loyout
+		Activity.LoadLayout("Pay_Port_Loyout")
+		size_View301.SetPX(Activity.Width,Activity.Height,240,320)
+		size_View301.SetPastScreenSizetoInche(3.333,4.444)
+		size_View301.SetSize_lbl_Views(lbl_1,18,15,30,207,14)
+		size_View301.SetSize_lbl_Views(lbl_2,54,15,40,207,14)
+		size_View301.SetSize_btn(btn_buy,107,32,176,29,10)
+		size_View301.SetSize_btn(btn_clip,147,32,176,29,10)
+		size_View301.SetSize_btn(btn_Exit,188,32,176,29,10)
+		rn=Rnd(0,10000)
+		
+				
+	Else If File.Exists(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)=True And File.Exists(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)=True Then
+		StartService(check_servis)
+		'تست صحت لایسنس ها
+					
+		rn=(File.GetText(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)-3)/2
+		
+		If Rnd(0,3)=0 Then
+			StartActivity(Home_Act)
+			StartService(check_servis)
+			Activity.Finish
+		Else
+			StartActivity(Home_Act)
+			Activity.Finish
+		End If
+				
+	Else
+		HandWork_Licence
+	End If
+					
+
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+
+Sub Activity_Pause (UserClosed As Boolean)
+End Sub
+
+
+
+
+Sub Create_HardLicence(Rand_Number As String,P_Serial) As String
+
+	Dim ph As Phone
+	Dim bs As Base64
+	Hardware_licence=Rand_Number&ph.Product&ph.Manufacturer&ph.Model&ph.GetSettings("android_id")
+	Hardware_licence=bs.EncodeBtoS(Hardware_licence.GetBytes("UTF8"),0,Hardware_licence.GetBytes("UTF8").Length)
+	Hardware_licence=Hardware_licence&P_Serial
+
+	Hardware_licence= Encryption_stn1(Hardware_licence)
+
+	Hardware_licence= Hardware_licence.SubString2(Hardware_licence.Length-4,Hardware_licence.Length)&Hardware_licence.SubString2(0,Hardware_licence.Length-4)
+
+	Return Interchange_stn.Encryption_Query_String_stn(Hardware_licence)
+
+End Sub
+
+Sub HandWork_Licence
+	Msgbox("لایسنس امنیتی نرم افزار دستکاری شده","مشکل امنیتی")
+	File.Delete(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)
+	File.Delete(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)
+	ExitApplication
+End Sub
+
+''''''رمز نگاری 
+
+Public Sub Encryption_stn1(t As String) As String
+
+	Dim txt As String
+
+	Dim tx1 As String = ""
+	tx1 = ""
+	Dim cec(t.Length) As String
+	txt = t
+
+	For i = 0 To t.Length - 1
+		Dim x As String
+		x = txt.Substring(txt.Length - 1)
+		cec(i) = sina_ENC_stn1(x)
+		txt = txt.SubString2(0, txt.Length - 1)
+	Next
+	tx1 = ""
+	For j = 0 To cec.Length - 1
+		tx1 = cec(j) & tx1
+
+	Next
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	Return tx1
+End Sub
+
+
+
+Public Sub sina_ENC_stn1(v As String) As String
+
+	If v="0" Then
+		Return "8TrD"
+	Else If v="1" Then
+		Return "dG3I"
+	Else If v="2" Then
+		Return "lKj^"
+	Else If v="3" Then
+		Return "U-Wx"
+	Else If v="4" Then
+		Return "cq`c"
+	Else If v="5" Then
+		Return "B&Up"
+	Else If v="7" Then
+		Return "3^n?"
+	Else If v="8" Then
+		Return "gT^2"
+	Else If v="9" Then
+		Return "Z+.c"
+	Else If v="a" Then
+		Return "p].D"
+	Else If v="b" Then
+		Return "<Jc)"
+	Else If v="c" Then
+		Return ",<e1"
+	Else If v="d" Then
+		Return "d)]t"
+	Else If v="e" Then
+		Return "Dnrw"
+	Else If v="f" Then
+		Return "64Sy"
+	Else If v="g" Then
+		Return "evOV"
+	Else If v="h" Then
+		Return "W3g&"
+	Else If v="i" Then
+		Return "KUBo"
+	Else If v="j" Then
+		Return "oF])"
+	Else If v="k" Then
+		Return "=jQ("
+	Else If v="l" Then
+		Return "1BN&"
+	Else If v="m" Then
+		Return "_/!$"
+	Else If v="n" Then
+		Return "BsH/"
+	Else If v="o" Then
+		Return "8T$4"
+	Else If v="p" Then
+		Return ",)2]"
+	Else If v="q" Then
+		Return "Jq,N"
+	Else If v="r" Then
+		Return "{$]T"
+	Else If v="s" Then
+		Return "kGhY"
+	Else If v="t" Then
+		Return "T?W)"
+	Else If v="u" Then
+		Return "}+=p"
+	Else If v="v" Then
+		Return "jEK2"
+	Else If v="w" Then
+		Return "gy**"
+	Else If v="x" Then
+		Return "K7fM"
+	Else If v="y" Then
+		Return "VN=%"
+	Else If v="z" Then
+		Return "RC4T"
+	Else If v="A" Then
+		Return "/dhN"
+	Else If v="B" Then
+		Return "MBI_"
+	Else If v="C" Then
+		Return "FkZz"
+	Else If v="D" Then
+		Return "_Wx."
+	Else If v="E" Then
+		Return "L`9s"
+	Else If v="F" Then
+		Return "x98&"
+	Else If v="G" Then
+		Return "%z/?"
+	Else If v="H" Then
+		Return "1glP"
+	Else If v="I" Then
+		Return "8OtO"
+	Else If v="J" Then
+		Return "B-D_"
+	Else If v="K" Then
+		Return ".3b!"
+	Else If v="L" Then
+		Return "e2[2"
+	Else If v="M" Then
+		Return "DtJ`"
+	Else If v="N" Then
+		Return "5t*5"
+	Else If v="O" Then
+		Return "UB^~"
+	Else If v="P" Then
+		Return "+yKp"
+	Else If v="Q" Then
+		Return "KUlK"
+	Else If v="R" Then
+		Return "~odq"
+	Else If v="S" Then
+		Return "#qi$"
+	Else If v="T" Then
+		Return "$3Qw"
+	Else If v="U" Then
+		Return "83x}"
+	Else If v="V" Then
+		Return "Inz."
+	Else If v="W" Then
+		Return "$IO{"
+	Else If v="X" Then
+		Return ",7&L"
+	Else If v="Y" Then
+		Return ",fH?"
+	Else If v="Z" Then
+		Return "tj1}"
+	Else If v="~" Then
+		Return "<^dt"
+	Else If v="`" Then
+		Return "Gmp`"
+	Else If v="!" Then
+		Return "D=jX"
+	Else If v="#" Then
+		Return "F`mE"
+	Else If v="$" Then
+		Return "W44?"
+	Else If v="%" Then
+		Return "<LG4"
+	Else If v="^" Then
+		Return "plD/"
+	Else If v="&" Then
+		Return "#uk{"
+	Else If v="*" Then
+		Return "L,n["
+	Else If v="(" Then
+		Return ">}(G"
+	Else If v=")" Then
+		Return "R}M6"
+	Else If v="_" Then
+		Return "_`mg"
+	Else If v="-" Then
+		Return ".%jm"
+	Else If v="=" Then
+		Return "iAs}"
+	Else If v="+" Then
+		Return "bGqV"
+	Else If v="/" Then
+		Return "[,f["
+	Else If v="?" Then
+		Return "{`6T"
+	Else If v="<" Then
+		Return "sXCJ"
+	Else If v=">" Then
+		Return "l83="
+	Else If v="." Then
+		Return "%N6I"
+	Else If v="{" Then
+		Return "IS-4"
+	Else If v="}" Then
+		Return "bV?P"
+	Else If v="[" Then
+		Return "2Mw}"
+	Else If v="]" Then
+		Return "i%Oz"
+	Else If v="," Then
+		Return "J+,7"
+	Else If v="'" Then
+		Return "1BB^"
+	Else If v="6" Then
+		Return "r,W5"
+	Else
+		Return v & v & v & v
+	End If
+End Sub
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+'''''''''''''
+' Dim lng As Int
+'''''''''''''
+
+
+
+Public Sub Decryption_stn1_stn1( t As String) As String
+	lng =4
+
+
+	Dim txt As String
+
+	Dim tx2 As String
+	Dim cdc(t.Length) As String
+
+	txt = t
+
+	For n = 0 To t.Length / lng - 1
+		Dim x As String
+		x = txt.Substring(txt.Length - lng)
+		cdc(n) = sina_DEC_stn1_stn1(x)
+		txt = txt.SubString2(0, txt.Length - lng)
+	Next
+
+	For b = 0 To cdc.Length - 1
+		tx2 = cdc(b) & tx2
+	Next
+	''''''''''''''''''''
+	Return tx2
+End Sub
+
+
+Public Sub sina_DEC_stn1_stn1(v As String) As String
+	If v="8TrD" Then
+		Return "0"
+	Else If v="dG3I" Then
+		Return "1"
+	Else If v="lKj^" Then
+		Return "2"
+	Else If v="U-Wx" Then
+		Return "3"
+	Else If v="cq`c" Then
+		Return "4"
+	Else If v="B&Up" Then
+		Return "5"
+	Else If v="3^n?" Then
+		Return "7"
+	Else If v="gT^2" Then
+		Return "8"
+	Else If v="Z+.c" Then
+		Return "9"
+	Else If v="p].D" Then
+		Return "a"
+	Else If v="<Jc)" Then
+		Return "b"
+	Else If v=",<e1" Then
+		Return "c"
+	Else If v="d)]t" Then
+		Return "d"
+	Else If v="Dnrw" Then
+		Return "e"
+	Else If v="64Sy" Then
+		Return "f"
+	Else If v="evOV" Then
+		Return "g"
+	Else If v="W3g&" Then
+		Return "h"
+	Else If v="KUBo" Then
+		Return "i"
+	Else If v="oF])" Then
+		Return "j"
+	Else If v="=jQ(" Then
+		Return "k"
+	Else If v="1BN&" Then
+		Return "l"
+	Else If v="_/!$" Then
+		Return "m"
+	Else If v="BsH/" Then
+		Return "n"
+	Else If v="8T$4" Then
+		Return "o"
+	Else If v=",)2]" Then
+		Return "p"
+	Else If v="Jq,N" Then
+		Return "q"
+	Else If v="{$]T" Then
+		Return "r"
+	Else If v="kGhY" Then
+		Return "s"
+	Else If v="T?W)" Then
+		Return "t"
+	Else If v="}+=p" Then
+		Return "u"
+	Else If v="jEK2" Then
+		Return "v"
+	Else If v="gy**" Then
+		Return "w"
+	Else If v="K7fM" Then
+		Return "x"
+	Else If v="VN=%" Then
+		Return "y"
+	Else If v="RC4T" Then
+		Return "z"
+	Else If v="/dhN" Then
+		Return "A"
+	Else If v="MBI_" Then
+		Return "B"
+	Else If v="FkZz" Then
+		Return "C"
+	Else If v="_Wx." Then
+		Return "D"
+	Else If v="L`9s" Then
+		Return "E"
+	Else If v="x98&" Then
+		Return "F"
+	Else If v="%z/?" Then
+		Return "G"
+	Else If v="1glP" Then
+		Return "H"
+	Else If v="8OtO" Then
+		Return "I"
+	Else If v="B-D_" Then
+		Return "J"
+	Else If v=".3b!" Then
+		Return "K"
+	Else If v="e2[2" Then
+		Return "L"
+	Else If v="DtJ`" Then
+		Return "M"
+	Else If v="5t*5" Then
+		Return "N"
+	Else If v="UB^~" Then
+		Return "O"
+	Else If v="+yKp" Then
+		Return "P"
+	Else If v="KUlK" Then
+		Return "Q"
+	Else If v="~odq" Then
+		Return "R"
+	Else If v="#qi$" Then
+		Return "S"
+	Else If v="$3Qw" Then
+		Return "T"
+	Else If v="83x}" Then
+		Return "U"
+	Else If v="Inz." Then
+		Return "V"
+	Else If v="$IO{" Then
+		Return "W"
+	Else If v=",7&L" Then
+		Return "X"
+	Else If v=",fH?" Then
+		Return "Y"
+	Else If v="tj1}" Then
+		Return "Z"
+	Else If v="<^dt" Then
+		Return "~"
+	Else If v="Gmp`" Then
+		Return "`"
+	Else If v="D=jX" Then
+		Return "!"
+	Else If v="F`mE" Then
+		Return "#"
+	Else If v="W44?" Then
+		Return "$"
+	Else If v="<LG4" Then
+		Return "%"
+	Else If v="plD/" Then
+		Return "^"
+	Else If v="#uk{" Then
+		Return "&"
+	Else If v="L,n[" Then
+		Return "*"
+	Else If v=">}(G" Then
+		Return "("
+	Else If v="R}M6" Then
+		Return ")"
+	Else If v="_`mg" Then
+		Return "_"
+	Else If v=".%jm" Then
+		Return "-"
+	Else If v="iAs}" Then
+		Return "="
+	Else If v="bGqV" Then
+		Return "+"
+	Else If v="[,f[" Then
+		Return "/"
+	Else If v="{`6T" Then
+		Return "?"
+	Else If v="sXCJ" Then
+		Return "<"
+	Else If v="l83=" Then
+		Return ">"
+	Else If v="%N6I" Then
+		Return "."
+	Else If v="IS-4" Then
+		Return "{"
+	Else If v="bV?P" Then
+		Return "}"
+	Else If v="2Mw}" Then
+		Return "["
+	Else If v="i%Oz" Then
+		Return "]"
+	Else If v="J+,7" Then
+		Return ","
+	Else If v="1BB^" Then
+		Return "'"
+	Else If v="r,W5" Then
+		Return "6"
+	Else
+		Return v.Substring(v.Length - 1)
+	End If
+
+End Sub
+
+
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+Public Sub Encryption_stn2(t As String) As String
+
+	Dim txt As String
+
+	Dim tx1 As String = ""
+	tx1 = ""
+	Dim cec(t.Length) As String
+	txt = t
+
+	For i = 0 To t.Length - 1
+		Dim x As String
+		x = txt.Substring(txt.Length - 1)
+		cec(i) = sina_ENC_stn2(x)
+		txt = txt.SubString2(0, txt.Length - 1)
+	Next
+	tx1 = ""
+	For j = 0 To cec.Length - 1
+		tx1 = cec(j) & tx1
+
+	Next
+
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	Return tx1
+End Sub
+
+
+
+Public Sub sina_ENC_stn2(v As String) As String
+
+	If v="0" Then
+		Return "_%"
+	Else If v="1" Then
+		Return "8i"
+	Else If v="2" Then
+		Return "-f"
+	Else If v="3" Then
+		Return "?1"
+	Else If v="4" Then
+		Return "JM"
+	Else If v="5" Then
+		Return "<*"
+	Else If v="7" Then
+		Return "qO"
+	Else If v="8" Then
+		Return "[/"
+	Else If v="9" Then
+		Return "D>"
+	Else If v="a" Then
+		Return "JF"
+	Else If v="b" Then
+		Return "y/"
+	Else If v="c" Then
+		Return "7Q"
+	Else If v="d" Then
+		Return "TS"
+	Else If v="e" Then
+		Return "zB"
+	Else If v="f" Then
+		Return "9c"
+	Else If v="g" Then
+		Return "Ig"
+	Else If v="h" Then
+		Return "lt"
+	Else If v="i" Then
+		Return "Yl"
+	Else If v="j" Then
+		Return "&+"
+	Else If v="k" Then
+		Return "DT"
+	Else If v="l" Then
+		Return "-s"
+	Else If v="m" Then
+		Return "MH"
+	Else If v="n" Then
+		Return "aC"
+	Else If v="o" Then
+		Return "8n"
+	Else If v="p" Then
+		Return "J/"
+	Else If v="q" Then
+		Return "a%"
+	Else If v="r" Then
+		Return "J{"
+	Else If v="s" Then
+		Return ")n"
+	Else If v="t" Then
+		Return "_Y"
+	Else If v="u" Then
+		Return "V7"
+	Else If v="v" Then
+		Return "[f"
+	Else If v="w" Then
+		Return "2L"
+	Else If v="x" Then
+		Return "FM"
+	Else If v="y" Then
+		Return "{x"
+	Else If v="z" Then
+		Return "_d"
+	Else If v="A" Then
+		Return "Of"
+	Else If v="B" Then
+		Return "P["
+	Else If v="C" Then
+		Return "b."
+	Else If v="D" Then
+		Return "L1"
+	Else If v="E" Then
+		Return "LZ"
+	Else If v="F" Then
+		Return "GE"
+	Else If v="G" Then
+		Return "rj"
+	Else If v="H" Then
+		Return "gG"
+	Else If v="I" Then
+		Return "3U"
+	Else If v="J" Then
+		Return "aN"
+	Else If v="K" Then
+		Return "+&"
+	Else If v="L" Then
+		Return "7m"
+	Else If v="M" Then
+		Return "o4"
+	Else If v="N" Then
+		Return "D]"
+	Else If v="O" Then
+		Return "pG"
+	Else If v="P" Then
+		Return "2>"
+	Else If v="Q" Then
+		Return ")D"
+	Else If v="R" Then
+		Return "zJ"
+	Else If v="S" Then
+		Return "+x"
+	Else If v="T" Then
+		Return "0L"
+	Else If v="U" Then
+		Return "+6"
+	Else If v="V" Then
+		Return "bN"
+	Else If v="W" Then
+		Return ".E"
+	Else If v="X" Then
+		Return "oi"
+	Else If v="Y" Then
+		Return "b="
+	Else If v="Z" Then
+		Return "-/"
+	Else If v="~" Then
+		Return "(6"
+	Else If v="`" Then
+		Return "xp"
+	Else If v="!" Then
+		Return "UN"
+	Else If v="#" Then
+		Return "ha"
+	Else If v="$" Then
+		Return "&F"
+	Else If v="%" Then
+		Return "[e"
+	Else If v="^" Then
+		Return "G9"
+	Else If v="&" Then
+		Return "yL"
+	Else If v="*" Then
+		Return "In"
+	Else If v="(" Then
+		Return "Ca"
+	Else If v=")" Then
+		Return "Xg"
+	Else If v="_" Then
+		Return "IP"
+	Else If v="-" Then
+		Return "lG"
+	Else If v="=" Then
+		Return "N!"
+	Else If v="+" Then
+		Return "OD"
+	Else If v="/" Then
+		Return "[c"
+	Else If v="?" Then
+		Return "!+"
+	Else If v="<" Then
+		Return "7s"
+	Else If v=">" Then
+		Return "m#"
+	Else If v="." Then
+		Return "=b"
+	Else If v="{" Then
+		Return "*]"
+	Else If v="}" Then
+		Return "wc"
+	Else If v="[" Then
+		Return "#G"
+	Else If v="]" Then
+		Return "0T"
+	Else If v="," Then
+		Return "<>"
+	Else If v="'" Then
+		Return "a*"
+	Else If v="6" Then
+		Return "rS"
+	Else
+		Return v & v
+	End If
+End Sub
+
+
+'''''''''''''
+' Dim lng As Int
+'''''''''''''
+
+
+
+Public Sub Decryption_stn2( t As String) As String
+	lng =2
+
+
+	Dim txt As String
+
+	Dim tx2 As String
+	Dim cdc(t.Length) As String
+
+	txt = t
+
+	For n = 0 To t.Length / lng - 1
+		Dim x As String
+		x = txt.Substring(txt.Length - lng)
+		cdc(n) = sina_DEC_stn2(x)
+		txt = txt.SubString2(0, txt.Length - lng)
+	Next
+
+	For b = 0 To cdc.Length - 1
+		tx2 = cdc(b) & tx2
+	Next
+	''''''''''''''''''''
+	Return tx2
+End Sub
+
+
+Public Sub sina_DEC_stn2(v As String) As String
+	If v="_%" Then
+		Return "0"
+	Else If v="8i" Then
+		Return "1"
+	Else If v="-f" Then
+		Return "2"
+	Else If v="?1" Then
+		Return "3"
+	Else If v="JM" Then
+		Return "4"
+	Else If v="<*" Then
+		Return "5"
+	Else If v="qO" Then
+		Return "7"
+	Else If v="[/" Then
+		Return "8"
+	Else If v="D>" Then
+		Return "9"
+	Else If v="JF" Then
+		Return "a"
+	Else If v="y/" Then
+		Return "b"
+	Else If v="7Q" Then
+		Return "c"
+	Else If v="TS" Then
+		Return "d"
+	Else If v="zB" Then
+		Return "e"
+	Else If v="9c" Then
+		Return "f"
+	Else If v="Ig" Then
+		Return "g"
+	Else If v="lt" Then
+		Return "h"
+	Else If v="Yl" Then
+		Return "i"
+	Else If v="&+" Then
+		Return "j"
+	Else If v="DT" Then
+		Return "k"
+	Else If v="-s" Then
+		Return "l"
+	Else If v="MH" Then
+		Return "m"
+	Else If v="aC" Then
+		Return "n"
+	Else If v="8n" Then
+		Return "o"
+	Else If v="J/" Then
+		Return "p"
+	Else If v="a%" Then
+		Return "q"
+	Else If v="J{" Then
+		Return "r"
+	Else If v=")n" Then
+		Return "s"
+	Else If v="_Y" Then
+		Return "t"
+	Else If v="V7" Then
+		Return "u"
+	Else If v="[f" Then
+		Return "v"
+	Else If v="2L" Then
+		Return "w"
+	Else If v="FM" Then
+		Return "x"
+	Else If v="{x" Then
+		Return "y"
+	Else If v="_d" Then
+		Return "z"
+	Else If v="Of" Then
+		Return "A"
+	Else If v="P[" Then
+		Return "B"
+	Else If v="b." Then
+		Return "C"
+	Else If v="L1" Then
+		Return "D"
+	Else If v="LZ" Then
+		Return "E"
+	Else If v="GE" Then
+		Return "F"
+	Else If v="rj" Then
+		Return "G"
+	Else If v="gG" Then
+		Return "H"
+	Else If v="3U" Then
+		Return "I"
+	Else If v="aN" Then
+		Return "J"
+	Else If v="+&" Then
+		Return "K"
+	Else If v="7m" Then
+		Return "L"
+	Else If v="o4" Then
+		Return "M"
+	Else If v="D]" Then
+		Return "N"
+	Else If v="pG" Then
+		Return "O"
+	Else If v="2>" Then
+		Return "P"
+	Else If v=")D" Then
+		Return "Q"
+	Else If v="zJ" Then
+		Return "R"
+	Else If v="+x" Then
+		Return "S"
+	Else If v="0L" Then
+		Return "T"
+	Else If v="+6" Then
+		Return "U"
+	Else If v="bN" Then
+		Return "V"
+	Else If v=".E" Then
+		Return "W"
+	Else If v="oi" Then
+		Return "X"
+	Else If v="b=" Then
+		Return "Y"
+	Else If v="-/" Then
+		Return "Z"
+	Else If v="(6" Then
+		Return "~"
+	Else If v="xp" Then
+		Return "`"
+	Else If v="UN" Then
+		Return "!"
+	Else If v="ha" Then
+		Return "#"
+	Else If v="&F" Then
+		Return "$"
+	Else If v="[e" Then
+		Return "%"
+	Else If v="G9" Then
+		Return "^"
+	Else If v="yL" Then
+		Return "&"
+	Else If v="In" Then
+		Return "*"
+	Else If v="Ca" Then
+		Return "("
+	Else If v="Xg" Then
+		Return ")"
+	Else If v="IP" Then
+		Return "_"
+	Else If v="lG" Then
+		Return "-"
+	Else If v="N!" Then
+		Return "="
+	Else If v="OD" Then
+		Return "+"
+	Else If v="[c" Then
+		Return "/"
+	Else If v="!+" Then
+		Return "?"
+	Else If v="7s" Then
+		Return "<"
+	Else If v="m#" Then
+		Return ">"
+	Else If v="=b" Then
+		Return "."
+	Else If v="*]" Then
+		Return "{"
+	Else If v="wc" Then
+		Return "}"
+	Else If v="#G" Then
+		Return "["
+	Else If v="0T" Then
+		Return "]"
+	Else If v="<>" Then
+		Return ","
+	Else If v="a*" Then
+		Return "'"
+	Else If v="rS" Then
+		Return "6"
+	Else
+		Return v.Substring(v.Length - 1)
+	End If
+
+End Sub
+
+''''''رمز نگاری پایان 
+
+Sub btn_clip_Click
+	Dim edu_i As Intent
+	edu_i.Initialize(edu_i.ACTION_VIEW,edu_CLip)
+	StartActivity(edu_i)
+End Sub
+
+Sub btn_Exit_Click
+	If Msgbox2("میخواهید از برنامه خارج شوید ؟","خروج","بله","نه","",Null)=DialogResponse.POSITIVE Then
+		ExitApplication()
+	End If
+End Sub
+
+
+Sub JobDone(Job As HttpJob)
+
+'	ProgressDialogHide
+
+
+	If Job.Success Then
+
+		If Job.JobName="check_ht" And Job.GetString2("ASCII")<>"" Then
+			
+			If Job.GetString2("ASCII").Replace("?","")=ch_sign.sha1.Replace(":","").ToLowerCase Then
+				b_mark.Initialize("bm",p_Key)
+			Else
+				HandWork_Licence
+			End If
+		End If
+			
+	Else
+		Dim msg_title="خطا",msg_cmt="خطایی در حین خرید نرم افزار به وجود آمده است"&CRLF&CRLF&"لطفا از اتصال به اینترنت و نصب آخرین نسخه نرم افزار بر روی دستگاه خود مطمئن شوید"
+		Msgbox(msg_cmt,msg_title)
+	End If
+	
+End Sub
+
+
+
+Sub bm_BillingSupported (Supported As Boolean, Message As String)
+
+	ProgressDialogHide
+
+	If Supported=True Then
+		Dim msl As String=Create_HardLicence(rn,check_servis.pi)
+		b_mark.RequestPayment(P_ID,"inapp",msl.SubString2(0,((msl.Length*2)/10)+7))
+		
+	Else
+			
+		Msgbox("لطفا از نصب آخرین نسخه اپلیکیشن ایران اپس بر روی دستگاه خود مطمئن شوید ، خطای زیر روی داده است :"&CRLF&Message, "خطا")
+		
+	End If
+End Sub
+
+
+Sub bm_PurchaseCompleted (Success As Boolean, Product As Purchase)
+	
+	Dim msl As String=Create_HardLicence(rn,check_servis.pi)
+	msl=msl.SubString2(0,((msl.Length*2)/10)+7)
+	If Success And Product.DeveloperPayload=msl Then
+		
+			Dim soft_License As String=Create_HardLicence(rn,check_servis.pi)
+        	
+			File.MakeDir(File.DirInternal,check_servis.rnd_Path)
+			File.MakeDir(File.DirInternal,check_servis.lsn_Path)
+			File.WriteString(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f,soft_License.SubString2(0,soft_License.Length/2)&check_servis.vain_text&soft_License.SubString2(soft_License.Length/2,soft_License.Length))
+			File.WriteString(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f,(rn*2)+3)
+        	
+			StartActivity(Home_Act)
+			Activity.Finish
+		
+	Else
+			Msgbox("فرآیند خرید نرم افزار ناموفق بوده است","خطا")
+	End If
+	
+End Sub
+
+
+Sub btn_buy_Click
+	ProgressDialogShow2("لطفا کمی صبر کنید ...",False)
+	
+	Dim k1 As SecurityInBilling
+	k1.Initialize
+
+
+		If k1.CheckPatcher = True Then
+			Msgbox("شما از برنامه هک استفاده میکنید و مجاز به خرید نرم افزار نیستید !!","مشکل امنیتی")
+		     HandWork_Licence 
+		Else
+			ht.Initialize("check_ht",Me)
+			ht.PostString(check_servis.WebSite_URL&"/prv/bdsgsdfgsdfg/dsdfgsdfgsdfgsdfgsdfg/sdfgsdfgsdfgsdfg.php","sina=gh&ya_ali=dfgsdf&gsdfgsdf="&check_servis.p_sign)
+		End If
+End Sub
+
