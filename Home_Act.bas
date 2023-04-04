@@ -51,6 +51,16 @@ Dim sld1 As SlidingMenu
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
+	If FirstTime Then
+		If File.Exists(File.DirInternal,"fsaccs/sqrgdb_lsit_Fani_t.txt") And File.Exists(File.DirInternal,"fsaccs/sqrgdb_lsit_Landy_C.txt") And File.Exists(File.DirInternal,"fsaccs/sqrgdb_Lostictevision_URL.txt") Then
+		
+		Definition_Permissions_ACT.Current_Tab=0
+		StartActivity(Definition_Permissions_ACT)
+		Activity.Finish
+		
+		End If
+	End If
+	
 Activity.LoadLayout("Home_Screen")
 main_panel.LoadLayout("loyout_items")
 
@@ -116,6 +126,16 @@ img_Border_Slide6.Color=Colors.Red
 #End Region
 
 #End Region
+
+
+#Region Add About Me
+btn_AboutWe.Text="درباره من"
+btn_Contact.Text="اطلاعات تماس"
+btn_Advice.Text="مشاهده صفحه گیت هاب"
+btn_Contact_SlideMenu.Text="اطلاعات تماس"
+btn_Comments_SlideMenu.Text="مشاهده صفحه گیت هاب"
+#End Region
+
 End Sub
 
 Sub Activity_Resume
@@ -144,19 +164,22 @@ Sub btn_Help_Click
 End Sub
 
 Sub btn_AboutWe_Click
-	Dim U_In As Intent
-	U_In.Initialize(U_In.ACTION_VIEW,"http://modernplus.ir/about.html")
-	StartActivity(U_In)
+Msgbox("توسعه دهنده: سینا کردستانی"&CRLF&CRLF&"برنامه نویس و معمار سامانه های نرم افزاری تحت وب و اپلیکیشن های تلفن های همراه","درباره سازنده")
+	
 End Sub
 
 Sub btn_Contact_Click
-	StartActivity(Contact_ACT)
-	Activity.Finish
+'	StartActivity(Contact_ACT)
+'	Activity.Finish
+Msgbox("Email: SinaKordestani@gmail.com"&CRLF&CRLF&"Linkedin: Sina-Kordestani","اطلاعات تماس")
 End Sub
 
 Sub btn_Advice_Click
-	StartActivity(Send_Comment_ACT)
-	Activity.Finish
+'	StartActivity(Send_Comment_ACT)
+'	Activity.Finish
+	Dim i As Intent
+	i.Initialize(i.ACTION_VIEW,"https://github.com/snk70/quick_access_old_android_app")
+	StartActivity(i)
 End Sub
 
 Sub btn_Exit_Click
@@ -189,13 +212,13 @@ Sub btn_Definition_SlideMenu_Click
 End Sub
 
 Sub btn_Contact_SlideMenu_Click
-	StartActivity(Contact_ACT)
-	Activity.Finish()
+Msgbox("Email: SinaKordestani@gmail.com"&CRLF&CRLF&"Linkedin: Sina-Kordestani","اطلاعات تماس")
 End Sub
 
 Sub btn_Comments_SlideMenu_Click
-	StartActivity(Send_Comment_ACT)
-	Activity.Finish()
+	Dim i As Intent
+	i.Initialize(i.ACTION_VIEW,"https://github.com/snk70")
+	StartActivity(i)
 End Sub
 
 Sub btn_Exit_SlideMenu_Click

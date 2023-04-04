@@ -59,13 +59,13 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 
-If Rnd(0,10)=0 Then
-	StartService(check_servis)
-End If
-
-If check_servis.OK_Status=False Then
-	ExitApplication
-End If
+'If Rnd(0,10)=0 Then
+'	StartService(check_servis)
+'End If
+'
+'If check_servis.OK_Status=False Then
+'	ExitApplication
+'End If
 
 	Activity.LoadLayout("Permissions_ACT")
 
@@ -232,7 +232,10 @@ End If
 
 	ProgressDialogHide
 
-
+#Region Add About Me
+btn_Contact_SlideMenu.Text="اطلاعات تماس"
+btn_Comments_SlideMenu.Text="مشاهده صفحه گیت هاب"
+#End Region
 
 
 End Sub
@@ -544,13 +547,13 @@ Sub btn_Definition_SlideMenu_Click
 End Sub
 
 Sub btn_Contact_SlideMenu_Click
-	StartActivity(Contact_ACT)
-	Activity.Finish()
+Msgbox("Email: SinaKordestani@gmail.com"&CRLF&CRLF&"Linkedin: Sina-Kordestani","اطلاعات تماس")
 End Sub
 
 Sub btn_Comments_SlideMenu_Click
-	StartActivity(Send_Comment_ACT)
-	Activity.Finish()
+	Dim i As Intent
+	i.Initialize(i.ACTION_VIEW,"https://github.com/snk70/quick_access_old_android_app")
+	StartActivity(i)
 End Sub
 
 Sub btn_Exit_SlideMenu_Click

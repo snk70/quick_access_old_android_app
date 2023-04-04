@@ -24,13 +24,13 @@ public class security_class_list extends B4AClass.ImplB4AClass implements BA.Sub
     }
 
  public anywheresoftware.b4a.keywords.Common __c = null;
-public String _txt = "";
-public String _c = "";
-public String _e = "";
-public String _d = "";
-public String _l = "";
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public Fast_Accessibility.ModernPl.main _main = null;
+public String _vvv0 = "";
+public String _vvvv1 = "";
+public String _vvvv2 = "";
+public String _vvvv3 = "";
+public String _v7 = "";
+public anywheresoftware.b4a.samples.httputils2.httputils2service _vvvv4 = null;
+public Fast_Accessibility.ModernPl.main _vvvv5 = null;
 public Fast_Accessibility.ModernPl.home_act _home_act = null;
 public Fast_Accessibility.ModernPl.definition_permissions_act _definition_permissions_act = null;
 public Fast_Accessibility.ModernPl.installed_applications _installed_applications = null;
@@ -38,11 +38,10 @@ public Fast_Accessibility.ModernPl.setting_parts _setting_parts = null;
 public Fast_Accessibility.ModernPl.file_manager _file_manager = null;
 public Fast_Accessibility.ModernPl.send_comment_act _send_comment_act = null;
 public Fast_Accessibility.ModernPl.contact_act _contact_act = null;
-public Fast_Accessibility.ModernPl.check_servis _check_servis = null;
 public Fast_Accessibility.ModernPl.selected_contact _selected_contact = null;
 public Fast_Accessibility.ModernPl.help_act _help_act = null;
-public Fast_Accessibility.ModernPl.searchmodule _searchmodule = null;
-public Fast_Accessibility.ModernPl.sizeviewv3 _sizeviewv3 = null;
+public Fast_Accessibility.ModernPl.searchmodule _vvvv6 = null;
+public Fast_Accessibility.ModernPl.sizeviewv3 _vvvv7 = null;
 public Fast_Accessibility.ModernPl.regular_validations _regular_validations = null;
 public Fast_Accessibility.ModernPl.size_view _size_view = null;
 public Fast_Accessibility.ModernPl.interchange_stn _interchange_stn = null;
@@ -50,15 +49,15 @@ public Fast_Accessibility.ModernPl.size_view301 _size_view301 = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Dim txt,c,e,d,l As String";
-_txt = "";
-_c = "";
-_e = "";
-_d = "";
-_l = "";
+_vvv0 = "";
+_vvvv1 = "";
+_vvvv2 = "";
+_vvvv3 = "";
+_v7 = "";
  //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }
-public String  _dec(String _t) throws Exception{
+public String  _vvv4(String _t) throws Exception{
 String _tx2 = "";
 String[] _cdc = null;
 int _n = 0;
@@ -71,7 +70,7 @@ _tx2 = "";
 _cdc = new String[_t.length()];
 java.util.Arrays.fill(_cdc,"");
  //BA.debugLineNum = 36;BA.debugLine="txt=t";
-_txt = _t;
+_vvv0 = _t;
  //BA.debugLineNum = 38;BA.debugLine="For n=0 To t.Length/3-1";
 {
 final int step4 = 1;
@@ -80,11 +79,11 @@ for (_n = (int) (0) ; (step4 > 0 && _n <= limit4) || (step4 < 0 && _n >= limit4)
  //BA.debugLineNum = 39;BA.debugLine="Dim x As String";
 _x = "";
  //BA.debugLineNum = 40;BA.debugLine="x=txt.SubString(txt.Length-3)";
-_x = _txt.substring((int) (_txt.length()-3));
+_x = _vvv0.substring((int) (_vvv0.length()-3));
  //BA.debugLineNum = 41;BA.debugLine="cdc(n)=moderndec(x)";
-_cdc[_n] = _moderndec(_x);
+_cdc[_n] = _vvv6(_x);
  //BA.debugLineNum = 42;BA.debugLine="txt=txt.SubString2(0,txt.Length-3)";
-_txt = _txt.substring((int) (0),(int) (_txt.length()-3));
+_vvv0 = _vvv0.substring((int) (0),(int) (_vvv0.length()-3));
  }
 };
  //BA.debugLineNum = 45;BA.debugLine="For b=0 To cdc.Length-1";
@@ -101,7 +100,7 @@ if (true) return _tx2;
  //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
-public String  _enc(String _t) throws Exception{
+public String  _vvv5(String _t) throws Exception{
 String _tx1 = "";
 String[] _cec = null;
 int _i = 0;
@@ -116,7 +115,7 @@ _tx1 = "";
 _cec = new String[_t.length()];
 java.util.Arrays.fill(_cec,"");
  //BA.debugLineNum = 14;BA.debugLine="txt=t";
-_txt = _t;
+_vvv0 = _t;
  //BA.debugLineNum = 16;BA.debugLine="For i=0 To t.Length-1";
 {
 final int step5 = 1;
@@ -125,11 +124,11 @@ for (_i = (int) (0) ; (step5 > 0 && _i <= limit5) || (step5 < 0 && _i >= limit5)
  //BA.debugLineNum = 17;BA.debugLine="Dim x As String";
 _x = "";
  //BA.debugLineNum = 18;BA.debugLine="x=txt.SubString(txt.Length-1)";
-_x = _txt.substring((int) (_txt.length()-1));
+_x = _vvv0.substring((int) (_vvv0.length()-1));
  //BA.debugLineNum = 19;BA.debugLine="cec(i)=modernenc(x)";
-_cec[_i] = _modernenc(_x);
+_cec[_i] = _vvv7(_x);
  //BA.debugLineNum = 20;BA.debugLine="txt=txt.SubString2(0,txt.Length-1)";
-_txt = _txt.substring((int) (0),(int) (_txt.length()-1));
+_vvv0 = _vvv0.substring((int) (0),(int) (_vvv0.length()-1));
  }
 };
  //BA.debugLineNum = 22;BA.debugLine="tx1=\"\"";
@@ -171,7 +170,7 @@ for (_i = (int) (0) ; (step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3)
  //BA.debugLineNum = 58;BA.debugLine="Dim str As String=MyList.Get(i)";
 _str = BA.ObjectToString(_mylist.Get(_i));
  //BA.debugLineNum = 59;BA.debugLine="lst1.Add(dec(str))";
-_lst1.Add((Object)(_dec(_str)));
+_lst1.Add((Object)(_vvv4(_str)));
  }
 };
  //BA.debugLineNum = 61;BA.debugLine="Return lst1";
@@ -196,7 +195,7 @@ for (_i = (int) (0) ; (step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3)
  //BA.debugLineNum = 69;BA.debugLine="Dim str As String=MyList.Get(i)";
 _str = BA.ObjectToString(_mylist.Get(_i));
  //BA.debugLineNum = 70;BA.debugLine="lst1.Add(enc(str))";
-_lst1.Add((Object)(_enc(_str)));
+_lst1.Add((Object)(_vvv5(_str)));
  }
 };
  //BA.debugLineNum = 72;BA.debugLine="Return lst1";
@@ -204,7 +203,7 @@ if (true) return _lst1;
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return null;
 }
-public String  _moderndec(String _v) throws Exception{
+public String  _vvv6(String _v) throws Exception{
  //BA.debugLineNum = 258;BA.debugLine="Private Sub moderndec(v As String) As String";
  //BA.debugLineNum = 259;BA.debugLine="If v=\"746\" Then";
 if ((_v).equals("746")) { 
@@ -478,7 +477,7 @@ if (true) return _v.substring((int) (_v.length()-1));
  //BA.debugLineNum = 438;BA.debugLine="End Sub";
 return "";
 }
-public String  _modernenc(String _v) throws Exception{
+public String  _vvv7(String _v) throws Exception{
  //BA.debugLineNum = 76;BA.debugLine="Private Sub modernenc(v As String) As String";
  //BA.debugLineNum = 77;BA.debugLine="If v=\"0\" Then";
 if ((_v).equals("0")) { 

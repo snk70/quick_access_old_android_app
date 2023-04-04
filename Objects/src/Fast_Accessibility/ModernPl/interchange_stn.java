@@ -11,9 +11,9 @@ public static Object getObject() {
     throw new RuntimeException("Code module does not support this method.");
 }
  public anywheresoftware.b4a.keywords.Common __c = null;
-public static int _lng = 0;
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public Fast_Accessibility.ModernPl.main _main = null;
+public static int _vvv2 = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _vvvv4 = null;
+public Fast_Accessibility.ModernPl.main _vvvv5 = null;
 public Fast_Accessibility.ModernPl.home_act _home_act = null;
 public Fast_Accessibility.ModernPl.definition_permissions_act _definition_permissions_act = null;
 public Fast_Accessibility.ModernPl.installed_applications _installed_applications = null;
@@ -21,11 +21,10 @@ public Fast_Accessibility.ModernPl.setting_parts _setting_parts = null;
 public Fast_Accessibility.ModernPl.file_manager _file_manager = null;
 public Fast_Accessibility.ModernPl.send_comment_act _send_comment_act = null;
 public Fast_Accessibility.ModernPl.contact_act _contact_act = null;
-public Fast_Accessibility.ModernPl.check_servis _check_servis = null;
 public Fast_Accessibility.ModernPl.selected_contact _selected_contact = null;
 public Fast_Accessibility.ModernPl.help_act _help_act = null;
-public Fast_Accessibility.ModernPl.searchmodule _searchmodule = null;
-public Fast_Accessibility.ModernPl.sizeviewv3 _sizeviewv3 = null;
+public Fast_Accessibility.ModernPl.searchmodule _vvvv6 = null;
+public Fast_Accessibility.ModernPl.sizeviewv3 _vvvv7 = null;
 public Fast_Accessibility.ModernPl.regular_validations _regular_validations = null;
 public Fast_Accessibility.ModernPl.size_view _size_view = null;
 public Fast_Accessibility.ModernPl.size_view301 _size_view301 = null;
@@ -38,7 +37,7 @@ String _x = "";
 int _b = 0;
  //BA.debugLineNum = 223;BA.debugLine="Public Sub Decryption_Query_String_stn( t As Strin";
  //BA.debugLineNum = 224;BA.debugLine="lng =2";
-_lng = (int) (2);
+_vvv2 = (int) (2);
  //BA.debugLineNum = 227;BA.debugLine="Dim txt As String";
 _txt = "";
  //BA.debugLineNum = 229;BA.debugLine="Dim tx2 As String";
@@ -51,16 +50,16 @@ _txt = _t;
  //BA.debugLineNum = 234;BA.debugLine="For n = 0 To t.Length / lng - 1";
 {
 final int step6 = 1;
-final int limit6 = (int) (_t.length()/(double)_lng-1);
+final int limit6 = (int) (_t.length()/(double)_vvv2-1);
 for (_n = (int) (0) ; (step6 > 0 && _n <= limit6) || (step6 < 0 && _n >= limit6); _n = ((int)(0 + _n + step6)) ) {
  //BA.debugLineNum = 235;BA.debugLine="Dim x As String";
 _x = "";
  //BA.debugLineNum = 236;BA.debugLine="x = txt.Substring(txt.Length - lng)";
-_x = _txt.substring((int) (_txt.length()-_lng));
+_x = _txt.substring((int) (_txt.length()-_vvv2));
  //BA.debugLineNum = 237;BA.debugLine="cdc(n) = sina_DEC_Query_String_stn(x)";
 _cdc[_n] = _sina_dec_query_string_stn(_ba,_x);
  //BA.debugLineNum = 238;BA.debugLine="txt = txt.SubString2(0, txt.Length - lng)";
-_txt = _txt.substring((int) (0),(int) (_txt.length()-_lng));
+_txt = _txt.substring((int) (0),(int) (_txt.length()-_vvv2));
  }
 };
  //BA.debugLineNum = 241;BA.debugLine="For b = 0 To cdc.Length - 1";
@@ -130,7 +129,7 @@ return "";
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 4;BA.debugLine="Dim lng As Int";
-_lng = 0;
+_vvv2 = 0;
  //BA.debugLineNum = 5;BA.debugLine="End Sub";
 return "";
 }

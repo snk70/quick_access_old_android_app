@@ -323,7 +323,7 @@ public class home_act extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.SlidingMenuWrapper _sld1 = null;
+public anywheresoftware.b4a.objects.SlidingMenuWrapper _vvvvv2 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lbl_strip = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lbl_toolbar = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btn_definition_permissions = null;
@@ -353,19 +353,18 @@ public anywheresoftware.b4a.objects.ImageViewWrapper _img_border_slide3 = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _img_border_slide2 = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _img_border_slide1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _main_panel = null;
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public Fast_Accessibility.ModernPl.main _main = null;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _vvvv4 = null;
+public Fast_Accessibility.ModernPl.main _vvvv5 = null;
 public Fast_Accessibility.ModernPl.definition_permissions_act _definition_permissions_act = null;
 public Fast_Accessibility.ModernPl.installed_applications _installed_applications = null;
 public Fast_Accessibility.ModernPl.setting_parts _setting_parts = null;
 public Fast_Accessibility.ModernPl.file_manager _file_manager = null;
 public Fast_Accessibility.ModernPl.send_comment_act _send_comment_act = null;
 public Fast_Accessibility.ModernPl.contact_act _contact_act = null;
-public Fast_Accessibility.ModernPl.check_servis _check_servis = null;
 public Fast_Accessibility.ModernPl.selected_contact _selected_contact = null;
 public Fast_Accessibility.ModernPl.help_act _help_act = null;
-public Fast_Accessibility.ModernPl.searchmodule _searchmodule = null;
-public Fast_Accessibility.ModernPl.sizeviewv3 _sizeviewv3 = null;
+public Fast_Accessibility.ModernPl.searchmodule _vvvv6 = null;
+public Fast_Accessibility.ModernPl.sizeviewv3 _vvvv7 = null;
 public Fast_Accessibility.ModernPl.regular_validations _regular_validations = null;
 public Fast_Accessibility.ModernPl.size_view _size_view = null;
 public Fast_Accessibility.ModernPl.interchange_stn _interchange_stn = null;
@@ -380,250 +379,269 @@ public static void initializeProcessGlobals() {
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
  //BA.debugLineNum = 48;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 49;BA.debugLine="Activity.LoadLayout(\"Home_Screen\")";
-mostCurrent._activity.LoadLayout("Home_Screen",mostCurrent.activityBA);
- //BA.debugLineNum = 50;BA.debugLine="main_panel.LoadLayout(\"loyout_items\")";
-mostCurrent._main_panel.LoadLayout("loyout_items",mostCurrent.activityBA);
- //BA.debugLineNum = 52;BA.debugLine="main_panel.SetVisibleAnimated(0,False)";
-mostCurrent._main_panel.SetVisibleAnimated((int) (0),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 53;BA.debugLine="main_panel.SetVisibleAnimated(3000,True)";
-mostCurrent._main_panel.SetVisibleAnimated((int) (3000),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 55;BA.debugLine="sizeviewV3.SetPX(Activity.Width,Activity.Height,32";
-mostCurrent._sizeviewv3._setpx(mostCurrent.activityBA,(float) (mostCurrent._activity.getWidth()),(float) (mostCurrent._activity.getHeight()),(float) (320),(float) (480));
- //BA.debugLineNum = 56;BA.debugLine="sizeviewV3.SetPastScreenSizetoInche(4.444,6.667)";
-mostCurrent._sizeviewv3._setpastscreensizetoinche(mostCurrent.activityBA,(float) (4.444),(float) (6.667));
- //BA.debugLineNum = 59;BA.debugLine="sizeviewV3.SetSize_lbl_Views(lbl_Strip,10,33,50,25";
-mostCurrent._sizeviewv3._setsize_lbl_views(mostCurrent.activityBA,mostCurrent._lbl_strip,(float) (10),(float) (33),(float) (50),(float) (254),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 60;BA.debugLine="sizeviewV3.SetSize_lbl_Views(lbl_Toolbar,20,288,30";
-mostCurrent._sizeviewv3._setsize_lbl_views(mostCurrent.activityBA,mostCurrent._lbl_toolbar,(float) (20),(float) (288),(float) (30),(float) (30),(float) (0));
- //BA.debugLineNum = 61;BA.debugLine="sizeviewV3.SetSizeViews(main_panel,110,10,370,300,";
-mostCurrent._sizeviewv3._setsizeviews(mostCurrent.activityBA,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(mostCurrent._main_panel.getObject())),(float) (110),(float) (10),(float) (370),(float) (300),(float) (0));
- //BA.debugLineNum = 64;BA.debugLine="sizeviewV3.SetSize_btn(btn_Definition_Permissions,";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_definition_permissions,(float) (10),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 65;BA.debugLine="sizeviewV3.SetSize_btn(btn_Help,69,40,39,225,25/1.";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_help,(float) (69),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 66;BA.debugLine="sizeviewV3.SetSize_btn(btn_AboutWe,128,40,39,225,2";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_aboutwe,(float) (128),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 67;BA.debugLine="sizeviewV3.SetSize_btn(btn_Contact,187,40,39,225,2";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_contact,(float) (187),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 68;BA.debugLine="sizeviewV3.SetSize_btn(btn_Advice,246,40,39,225,25";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_advice,(float) (246),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 69;BA.debugLine="sizeviewV3.SetSize_btn(btn_Exit,305,40,39,225,25/1";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_exit,(float) (305),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 71;BA.debugLine="main_panel.RequestFocus";
-mostCurrent._main_panel.RequestFocus();
- //BA.debugLineNum = 75;BA.debugLine="sld1.Initialize(\"\")";
-mostCurrent._sld1.Initialize(mostCurrent.activityBA,"");
- //BA.debugLineNum = 76;BA.debugLine="sld1.Mode=sld1.RIGHT";
-mostCurrent._sld1.setMode(mostCurrent._sld1.RIGHT);
- //BA.debugLineNum = 77;BA.debugLine="sld1.BehindOffset=(150/320)*Activity.Width";
-mostCurrent._sld1.setBehindOffset((int) ((150/(double)320)*mostCurrent._activity.getWidth()));
- //BA.debugLineNum = 78;BA.debugLine="sld1.Menu.LoadLayout(\"SlideMenu_Loyout\")";
-mostCurrent._sld1.getMenu().LoadLayout("SlideMenu_Loyout",mostCurrent.activityBA);
- //BA.debugLineNum = 80;BA.debugLine="sizeviewV3.SetSize_btn(btn_Home_Slidebar,0,0,38,17";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_home_slidebar,(float) (0),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 81;BA.debugLine="sizeviewV3.SetSize_btn(btn_LastDefinitionAccessibi";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_lastdefinitionaccessibility_slidebar,(float) (38),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 82;BA.debugLine="sizeviewV3.SetSize_btn(btn_Help_SlideBAr,76,0,38,1";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_help_slidebar,(float) (76),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 83;BA.debugLine="sizeviewV3.SetSize_btn(btn_Definition_SlideMenu,11";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_definition_slidemenu,(float) (114),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 84;BA.debugLine="sizeviewV3.SetSize_btn(btn_Contact_SlideMenu,151,0";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_contact_slidemenu,(float) (151),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 85;BA.debugLine="sizeviewV3.SetSize_btn(btn_Comments_SlideMenu,188,";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_comments_slidemenu,(float) (188),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
- //BA.debugLineNum = 86;BA.debugLine="sizeviewV3.SetSize_btn(btn_Exit_SlideMenu,226,0,38";
-mostCurrent._sizeviewv3._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_exit_slidemenu,(float) (226),(float) (0),(float) (38),(float) (171),(float) (20));
- //BA.debugLineNum = 88;BA.debugLine="sizeviewV3.SetSize_img(img_Home_SlideBar,2,4,34,36";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_home_slidebar,(float) (2),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 89;BA.debugLine="sizeviewV3.SetSize_img(img_LastDefinitionAccessibi";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_lastdefinitionaccessibility_slidebar,(float) (40),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 90;BA.debugLine="sizeviewV3.SetSize_img(img_Help_SlideBAr,78,4,34,3";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_help_slidebar,(float) (78),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 91;BA.debugLine="sizeviewV3.SetSize_img(img_Definition_SlideMenu,11";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_definition_slidemenu,(float) (116),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 92;BA.debugLine="sizeviewV3.SetSize_img(img_Contact_SlideMenu,153,4";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_contact_slidemenu,(float) (153),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 93;BA.debugLine="sizeviewV3.SetSize_img(img_Comments_SlideMenu,190,";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_comments_slidemenu,(float) (190),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 94;BA.debugLine="sizeviewV3.SetSize_img(img_Exit_SlideMenu,226,4,34";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_exit_slidemenu,(float) (226),(float) (4),(float) (34),(float) (36),(float) (0));
- //BA.debugLineNum = 98;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide1,38,0,1,17";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide1,(float) (38),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 99;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide2,76,0,1,17";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide2,(float) (76),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 100;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide3,114,0,1,1";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide3,(float) (114),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 101;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide4,151,0,1,1";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide4,(float) (151),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 102;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide5,188,0,1,1";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide5,(float) (188),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 103;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide6,226,0,1,1";
-mostCurrent._sizeviewv3._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide6,(float) (226),(float) (0),(float) (1),(float) (171),(float) (0));
- //BA.debugLineNum = 105;BA.debugLine="img_Border_Slide1.Color=Colors.Red";
-mostCurrent._img_border_slide1.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 106;BA.debugLine="img_Border_Slide2.Color=Colors.Red";
-mostCurrent._img_border_slide2.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 107;BA.debugLine="img_Border_Slide3.Color=Colors.Red";
-mostCurrent._img_border_slide3.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 108;BA.debugLine="img_Border_Slide4.Color=Colors.Red";
-mostCurrent._img_border_slide4.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 109;BA.debugLine="img_Border_Slide5.Color=Colors.Red";
-mostCurrent._img_border_slide5.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 110;BA.debugLine="img_Border_Slide6.Color=Colors.Red";
-mostCurrent._img_border_slide6.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
- //BA.debugLineNum = 114;BA.debugLine="End Sub";
-return "";
-}
-public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 200;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 202;BA.debugLine="If KeyCode=KeyCodes.KEYCODE_BACK Then";
-if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 204;BA.debugLine="btn_Exit_Click";
-_btn_exit_click();
- };
- //BA.debugLineNum = 207;BA.debugLine="Return True";
-if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 209;BA.debugLine="End Sub";
-return false;
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 120;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 122;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 116;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 118;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_aboutwe_click() throws Exception{
-anywheresoftware.b4a.objects.IntentWrapper _u_in = null;
- //BA.debugLineNum = 141;BA.debugLine="Sub btn_AboutWe_Click";
- //BA.debugLineNum = 142;BA.debugLine="Dim U_In As Intent";
-_u_in = new anywheresoftware.b4a.objects.IntentWrapper();
- //BA.debugLineNum = 143;BA.debugLine="U_In.Initialize(U_In.ACTION_VIEW,\"http://modernpl";
-_u_in.Initialize(_u_in.ACTION_VIEW,"http://modernplus.ir/about.html");
- //BA.debugLineNum = 144;BA.debugLine="StartActivity(U_In)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(_u_in.getObject()));
- //BA.debugLineNum = 145;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_advice_click() throws Exception{
- //BA.debugLineNum = 152;BA.debugLine="Sub btn_Advice_Click";
- //BA.debugLineNum = 153;BA.debugLine="StartActivity(Send_Comment_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._send_comment_act.getObject()));
- //BA.debugLineNum = 154;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 155;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_comments_slidemenu_click() throws Exception{
- //BA.debugLineNum = 191;BA.debugLine="Sub btn_Comments_SlideMenu_Click";
- //BA.debugLineNum = 192;BA.debugLine="StartActivity(Send_Comment_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._send_comment_act.getObject()));
- //BA.debugLineNum = 193;BA.debugLine="Activity.Finish()";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 194;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_contact_click() throws Exception{
- //BA.debugLineNum = 147;BA.debugLine="Sub btn_Contact_Click";
- //BA.debugLineNum = 148;BA.debugLine="StartActivity(Contact_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._contact_act.getObject()));
- //BA.debugLineNum = 149;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 150;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_contact_slidemenu_click() throws Exception{
- //BA.debugLineNum = 186;BA.debugLine="Sub btn_Contact_SlideMenu_Click";
- //BA.debugLineNum = 187;BA.debugLine="StartActivity(Contact_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._contact_act.getObject()));
- //BA.debugLineNum = 188;BA.debugLine="Activity.Finish()";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 189;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_definition_permissions_click() throws Exception{
- //BA.debugLineNum = 130;BA.debugLine="Sub btn_Definition_Permissions_Click";
- //BA.debugLineNum = 131;BA.debugLine="Definition_Permissions_ACT.Current_Tab=1";
-mostCurrent._definition_permissions_act._current_tab = (int) (1);
- //BA.debugLineNum = 132;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
+ //BA.debugLineNum = 49;BA.debugLine="If FirstTime Then";
+if (_firsttime) { 
+ //BA.debugLineNum = 50;BA.debugLine="If File.Exists(File.DirInternal,\"fsaccs/sqrgdb_l";
+if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"fsaccs/sqrgdb_lsit_Fani_t.txt") && anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"fsaccs/sqrgdb_lsit_Landy_C.txt") && anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"fsaccs/sqrgdb_Lostictevision_URL.txt")) { 
+ //BA.debugLineNum = 52;BA.debugLine="Definition_Permissions_ACT.Current_Tab=0";
+mostCurrent._definition_permissions_act._current_tab = (int) (0);
+ //BA.debugLineNum = 53;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._definition_permissions_act.getObject()));
- //BA.debugLineNum = 133;BA.debugLine="Activity.Finish()";
+ //BA.debugLineNum = 54;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
+ };
+ };
+ //BA.debugLineNum = 59;BA.debugLine="Activity.LoadLayout(\"Home_Screen\")";
+mostCurrent._activity.LoadLayout("Home_Screen",mostCurrent.activityBA);
+ //BA.debugLineNum = 60;BA.debugLine="main_panel.LoadLayout(\"loyout_items\")";
+mostCurrent._main_panel.LoadLayout("loyout_items",mostCurrent.activityBA);
+ //BA.debugLineNum = 62;BA.debugLine="main_panel.SetVisibleAnimated(0,False)";
+mostCurrent._main_panel.SetVisibleAnimated((int) (0),anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 63;BA.debugLine="main_panel.SetVisibleAnimated(3000,True)";
+mostCurrent._main_panel.SetVisibleAnimated((int) (3000),anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 65;BA.debugLine="sizeviewV3.SetPX(Activity.Width,Activity.Height,32";
+mostCurrent._vvvv7._vv0(mostCurrent.activityBA,(float) (mostCurrent._activity.getWidth()),(float) (mostCurrent._activity.getHeight()),(float) (320),(float) (480));
+ //BA.debugLineNum = 66;BA.debugLine="sizeviewV3.SetPastScreenSizetoInche(4.444,6.667)";
+mostCurrent._vvvv7._vv7(mostCurrent.activityBA,(float) (4.444),(float) (6.667));
+ //BA.debugLineNum = 69;BA.debugLine="sizeviewV3.SetSize_lbl_Views(lbl_Strip,10,33,50,25";
+mostCurrent._vvvv7._setsize_lbl_views(mostCurrent.activityBA,mostCurrent._lbl_strip,(float) (10),(float) (33),(float) (50),(float) (254),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 70;BA.debugLine="sizeviewV3.SetSize_lbl_Views(lbl_Toolbar,20,288,30";
+mostCurrent._vvvv7._setsize_lbl_views(mostCurrent.activityBA,mostCurrent._lbl_toolbar,(float) (20),(float) (288),(float) (30),(float) (30),(float) (0));
+ //BA.debugLineNum = 71;BA.debugLine="sizeviewV3.SetSizeViews(main_panel,110,10,370,300,";
+mostCurrent._vvvv7._vvv1(mostCurrent.activityBA,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(mostCurrent._main_panel.getObject())),(float) (110),(float) (10),(float) (370),(float) (300),(float) (0));
+ //BA.debugLineNum = 74;BA.debugLine="sizeviewV3.SetSize_btn(btn_Definition_Permissions,";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_definition_permissions,(float) (10),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 75;BA.debugLine="sizeviewV3.SetSize_btn(btn_Help,69,40,39,225,25/1.";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_help,(float) (69),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 76;BA.debugLine="sizeviewV3.SetSize_btn(btn_AboutWe,128,40,39,225,2";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_aboutwe,(float) (128),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 77;BA.debugLine="sizeviewV3.SetSize_btn(btn_Contact,187,40,39,225,2";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_contact,(float) (187),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 78;BA.debugLine="sizeviewV3.SetSize_btn(btn_Advice,246,40,39,225,25";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_advice,(float) (246),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 79;BA.debugLine="sizeviewV3.SetSize_btn(btn_Exit,305,40,39,225,25/1";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_exit,(float) (305),(float) (40),(float) (39),(float) (225),(float) (25/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 81;BA.debugLine="main_panel.RequestFocus";
+mostCurrent._main_panel.RequestFocus();
+ //BA.debugLineNum = 85;BA.debugLine="sld1.Initialize(\"\")";
+mostCurrent._vvvvv2.Initialize(mostCurrent.activityBA,"");
+ //BA.debugLineNum = 86;BA.debugLine="sld1.Mode=sld1.RIGHT";
+mostCurrent._vvvvv2.setMode(mostCurrent._vvvvv2.RIGHT);
+ //BA.debugLineNum = 87;BA.debugLine="sld1.BehindOffset=(150/320)*Activity.Width";
+mostCurrent._vvvvv2.setBehindOffset((int) ((150/(double)320)*mostCurrent._activity.getWidth()));
+ //BA.debugLineNum = 88;BA.debugLine="sld1.Menu.LoadLayout(\"SlideMenu_Loyout\")";
+mostCurrent._vvvvv2.getMenu().LoadLayout("SlideMenu_Loyout",mostCurrent.activityBA);
+ //BA.debugLineNum = 90;BA.debugLine="sizeviewV3.SetSize_btn(btn_Home_Slidebar,0,0,38,17";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_home_slidebar,(float) (0),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 91;BA.debugLine="sizeviewV3.SetSize_btn(btn_LastDefinitionAccessibi";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_lastdefinitionaccessibility_slidebar,(float) (38),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 92;BA.debugLine="sizeviewV3.SetSize_btn(btn_Help_SlideBAr,76,0,38,1";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_help_slidebar,(float) (76),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 93;BA.debugLine="sizeviewV3.SetSize_btn(btn_Definition_SlideMenu,11";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_definition_slidemenu,(float) (114),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 94;BA.debugLine="sizeviewV3.SetSize_btn(btn_Contact_SlideMenu,151,0";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_contact_slidemenu,(float) (151),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 95;BA.debugLine="sizeviewV3.SetSize_btn(btn_Comments_SlideMenu,188,";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_comments_slidemenu,(float) (188),(float) (0),(float) (38),(float) (171),(float) (20/(double)1.5773684210526315789473684210526));
+ //BA.debugLineNum = 96;BA.debugLine="sizeviewV3.SetSize_btn(btn_Exit_SlideMenu,226,0,38";
+mostCurrent._vvvv7._setsize_btn(mostCurrent.activityBA,mostCurrent._btn_exit_slidemenu,(float) (226),(float) (0),(float) (38),(float) (171),(float) (20));
+ //BA.debugLineNum = 98;BA.debugLine="sizeviewV3.SetSize_img(img_Home_SlideBar,2,4,34,36";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_home_slidebar,(float) (2),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 99;BA.debugLine="sizeviewV3.SetSize_img(img_LastDefinitionAccessibi";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_lastdefinitionaccessibility_slidebar,(float) (40),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 100;BA.debugLine="sizeviewV3.SetSize_img(img_Help_SlideBAr,78,4,34,3";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_help_slidebar,(float) (78),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 101;BA.debugLine="sizeviewV3.SetSize_img(img_Definition_SlideMenu,11";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_definition_slidemenu,(float) (116),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 102;BA.debugLine="sizeviewV3.SetSize_img(img_Contact_SlideMenu,153,4";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_contact_slidemenu,(float) (153),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 103;BA.debugLine="sizeviewV3.SetSize_img(img_Comments_SlideMenu,190,";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_comments_slidemenu,(float) (190),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 104;BA.debugLine="sizeviewV3.SetSize_img(img_Exit_SlideMenu,226,4,34";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_exit_slidemenu,(float) (226),(float) (4),(float) (34),(float) (36),(float) (0));
+ //BA.debugLineNum = 108;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide1,38,0,1,17";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide1,(float) (38),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 109;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide2,76,0,1,17";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide2,(float) (76),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 110;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide3,114,0,1,1";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide3,(float) (114),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 111;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide4,151,0,1,1";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide4,(float) (151),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 112;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide5,188,0,1,1";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide5,(float) (188),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 113;BA.debugLine="sizeviewV3.SetSize_img(img_Border_Slide6,226,0,1,1";
+mostCurrent._vvvv7._setsize_img(mostCurrent.activityBA,mostCurrent._img_border_slide6,(float) (226),(float) (0),(float) (1),(float) (171),(float) (0));
+ //BA.debugLineNum = 115;BA.debugLine="img_Border_Slide1.Color=Colors.Red";
+mostCurrent._img_border_slide1.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 116;BA.debugLine="img_Border_Slide2.Color=Colors.Red";
+mostCurrent._img_border_slide2.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 117;BA.debugLine="img_Border_Slide3.Color=Colors.Red";
+mostCurrent._img_border_slide3.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 118;BA.debugLine="img_Border_Slide4.Color=Colors.Red";
+mostCurrent._img_border_slide4.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 119;BA.debugLine="img_Border_Slide5.Color=Colors.Red";
+mostCurrent._img_border_slide5.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 120;BA.debugLine="img_Border_Slide6.Color=Colors.Red";
+mostCurrent._img_border_slide6.setColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 127;BA.debugLine="btn_AboutWe.Text=\"درباره من\"";
+mostCurrent._btn_aboutwe.setText((Object)("درباره من"));
+ //BA.debugLineNum = 128;BA.debugLine="btn_Contact.Text=\"اطلاعات تماس\"";
+mostCurrent._btn_contact.setText((Object)("اطلاعات تماس"));
+ //BA.debugLineNum = 129;BA.debugLine="btn_Advice.Text=\"مشاهده صفحه گیت هاب\"";
+mostCurrent._btn_advice.setText((Object)("مشاهده صفحه گیت هاب"));
+ //BA.debugLineNum = 130;BA.debugLine="btn_Contact_SlideMenu.Text=\"اطلاعات تماس\"";
+mostCurrent._btn_contact_slidemenu.setText((Object)("اطلاعات تماس"));
+ //BA.debugLineNum = 131;BA.debugLine="btn_Comments_SlideMenu.Text=\"مشاهده صفحه گیت هاب\"";
+mostCurrent._btn_comments_slidemenu.setText((Object)("مشاهده صفحه گیت هاب"));
  //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return "";
 }
-public static String  _btn_definition_slidemenu_click() throws Exception{
- //BA.debugLineNum = 180;BA.debugLine="Sub btn_Definition_SlideMenu_Click";
- //BA.debugLineNum = 181;BA.debugLine="Definition_Permissions_ACT.Current_Tab=1";
-mostCurrent._definition_permissions_act._current_tab = (int) (1);
- //BA.debugLineNum = 182;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._definition_permissions_act.getObject()));
- //BA.debugLineNum = 183;BA.debugLine="Activity.Finish()";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 184;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_exit_click() throws Exception{
- //BA.debugLineNum = 157;BA.debugLine="Sub btn_Exit_Click";
- //BA.debugLineNum = 158;BA.debugLine="If Msgbox2(\"میخواهید از برنامه خارج شوید ؟\",\"\",\"";
-if (anywheresoftware.b4a.keywords.Common.Msgbox2("میخواهید از برنامه خارج شوید ؟","","بله","","نه",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),mostCurrent.activityBA)==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) { 
- //BA.debugLineNum = 159;BA.debugLine="ExitApplication()";
-anywheresoftware.b4a.keywords.Common.ExitApplication();
- };
- //BA.debugLineNum = 161;BA.debugLine="End Sub";
-return "";
-}
-public static String  _btn_exit_slidemenu_click() throws Exception{
- //BA.debugLineNum = 196;BA.debugLine="Sub btn_Exit_SlideMenu_Click";
- //BA.debugLineNum = 197;BA.debugLine="btn_Exit_Click";
+public static boolean  _activity_keypress(int _keycode) throws Exception{
+ //BA.debugLineNum = 223;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 225;BA.debugLine="If KeyCode=KeyCodes.KEYCODE_BACK Then";
+if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
+ //BA.debugLineNum = 227;BA.debugLine="btn_Exit_Click";
 _btn_exit_click();
- //BA.debugLineNum = 198;BA.debugLine="End Sub";
+ };
+ //BA.debugLineNum = 230;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 232;BA.debugLine="End Sub";
+return false;
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 140;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
 }
-public static String  _btn_help_click() throws Exception{
- //BA.debugLineNum = 136;BA.debugLine="Sub btn_Help_Click";
- //BA.debugLineNum = 137;BA.debugLine="StartActivity(Help_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._help_act.getObject()));
- //BA.debugLineNum = 138;BA.debugLine="Activity.Finish()";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 139;BA.debugLine="End Sub";
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 136;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 138;BA.debugLine="End Sub";
 return "";
 }
-public static String  _btn_help_slidebar_click() throws Exception{
- //BA.debugLineNum = 175;BA.debugLine="Sub btn_Help_SlideBAr_Click";
- //BA.debugLineNum = 176;BA.debugLine="StartActivity(Help_ACT)";
-anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._help_act.getObject()));
- //BA.debugLineNum = 177;BA.debugLine="Activity.Finish()";
-mostCurrent._activity.Finish();
+public static String  _btn_aboutwe_click() throws Exception{
+ //BA.debugLineNum = 161;BA.debugLine="Sub btn_AboutWe_Click";
+ //BA.debugLineNum = 162;BA.debugLine="Msgbox(\"توسعه دهنده: سینا کردستانی\"&CRLF&CRLF&\"برن";
+anywheresoftware.b4a.keywords.Common.Msgbox("توسعه دهنده: سینا کردستانی"+anywheresoftware.b4a.keywords.Common.CRLF+anywheresoftware.b4a.keywords.Common.CRLF+"برنامه نویس و معمار سامانه های نرم افزاری تحت وب و اپلیکیشن های تلفن های همراه","درباره سازنده",mostCurrent.activityBA);
+ //BA.debugLineNum = 164;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_advice_click() throws Exception{
+anywheresoftware.b4a.objects.IntentWrapper _i = null;
+ //BA.debugLineNum = 172;BA.debugLine="Sub btn_Advice_Click";
+ //BA.debugLineNum = 175;BA.debugLine="Dim i As Intent";
+_i = new anywheresoftware.b4a.objects.IntentWrapper();
+ //BA.debugLineNum = 176;BA.debugLine="i.Initialize(i.ACTION_VIEW,\"https://github.com/sn";
+_i.Initialize(_i.ACTION_VIEW,"https://github.com/snk70/quick_access_old_android_app");
+ //BA.debugLineNum = 177;BA.debugLine="StartActivity(i)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(_i.getObject()));
  //BA.debugLineNum = 178;BA.debugLine="End Sub";
 return "";
 }
+public static String  _btn_comments_slidemenu_click() throws Exception{
+anywheresoftware.b4a.objects.IntentWrapper _i = null;
+ //BA.debugLineNum = 213;BA.debugLine="Sub btn_Comments_SlideMenu_Click";
+ //BA.debugLineNum = 214;BA.debugLine="Dim i As Intent";
+_i = new anywheresoftware.b4a.objects.IntentWrapper();
+ //BA.debugLineNum = 215;BA.debugLine="i.Initialize(i.ACTION_VIEW,\"https://github.com/sn";
+_i.Initialize(_i.ACTION_VIEW,"https://github.com/snk70");
+ //BA.debugLineNum = 216;BA.debugLine="StartActivity(i)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(_i.getObject()));
+ //BA.debugLineNum = 217;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_contact_click() throws Exception{
+ //BA.debugLineNum = 166;BA.debugLine="Sub btn_Contact_Click";
+ //BA.debugLineNum = 169;BA.debugLine="Msgbox(\"Email: SinaKordestani@gmail.com\"&CRLF&CRLF";
+anywheresoftware.b4a.keywords.Common.Msgbox("Email: SinaKordestani@gmail.com"+anywheresoftware.b4a.keywords.Common.CRLF+anywheresoftware.b4a.keywords.Common.CRLF+"Linkedin: Sina-Kordestani","اطلاعات تماس",mostCurrent.activityBA);
+ //BA.debugLineNum = 170;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_contact_slidemenu_click() throws Exception{
+ //BA.debugLineNum = 209;BA.debugLine="Sub btn_Contact_SlideMenu_Click";
+ //BA.debugLineNum = 210;BA.debugLine="Msgbox(\"Email: SinaKordestani@gmail.com\"&CRLF&CRLF";
+anywheresoftware.b4a.keywords.Common.Msgbox("Email: SinaKordestani@gmail.com"+anywheresoftware.b4a.keywords.Common.CRLF+anywheresoftware.b4a.keywords.Common.CRLF+"Linkedin: Sina-Kordestani","اطلاعات تماس",mostCurrent.activityBA);
+ //BA.debugLineNum = 211;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_definition_permissions_click() throws Exception{
+ //BA.debugLineNum = 150;BA.debugLine="Sub btn_Definition_Permissions_Click";
+ //BA.debugLineNum = 151;BA.debugLine="Definition_Permissions_ACT.Current_Tab=1";
+mostCurrent._definition_permissions_act._current_tab = (int) (1);
+ //BA.debugLineNum = 152;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._definition_permissions_act.getObject()));
+ //BA.debugLineNum = 153;BA.debugLine="Activity.Finish()";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 154;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_definition_slidemenu_click() throws Exception{
+ //BA.debugLineNum = 203;BA.debugLine="Sub btn_Definition_SlideMenu_Click";
+ //BA.debugLineNum = 204;BA.debugLine="Definition_Permissions_ACT.Current_Tab=1";
+mostCurrent._definition_permissions_act._current_tab = (int) (1);
+ //BA.debugLineNum = 205;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._definition_permissions_act.getObject()));
+ //BA.debugLineNum = 206;BA.debugLine="Activity.Finish()";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 207;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_exit_click() throws Exception{
+ //BA.debugLineNum = 180;BA.debugLine="Sub btn_Exit_Click";
+ //BA.debugLineNum = 181;BA.debugLine="If Msgbox2(\"میخواهید از برنامه خارج شوید ؟\",\"\",\"";
+if (anywheresoftware.b4a.keywords.Common.Msgbox2("میخواهید از برنامه خارج شوید ؟","","بله","","نه",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),mostCurrent.activityBA)==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) { 
+ //BA.debugLineNum = 182;BA.debugLine="ExitApplication()";
+anywheresoftware.b4a.keywords.Common.ExitApplication();
+ };
+ //BA.debugLineNum = 184;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_exit_slidemenu_click() throws Exception{
+ //BA.debugLineNum = 219;BA.debugLine="Sub btn_Exit_SlideMenu_Click";
+ //BA.debugLineNum = 220;BA.debugLine="btn_Exit_Click";
+_btn_exit_click();
+ //BA.debugLineNum = 221;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_help_click() throws Exception{
+ //BA.debugLineNum = 156;BA.debugLine="Sub btn_Help_Click";
+ //BA.debugLineNum = 157;BA.debugLine="StartActivity(Help_ACT)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._help_act.getObject()));
+ //BA.debugLineNum = 158;BA.debugLine="Activity.Finish()";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 159;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btn_help_slidebar_click() throws Exception{
+ //BA.debugLineNum = 198;BA.debugLine="Sub btn_Help_SlideBAr_Click";
+ //BA.debugLineNum = 199;BA.debugLine="StartActivity(Help_ACT)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._help_act.getObject()));
+ //BA.debugLineNum = 200;BA.debugLine="Activity.Finish()";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 201;BA.debugLine="End Sub";
+return "";
+}
 public static String  _btn_home_slidebar_click() throws Exception{
- //BA.debugLineNum = 165;BA.debugLine="Sub btn_Home_Slidebar_Click";
- //BA.debugLineNum = 166;BA.debugLine="sld1.HideMenus";
-mostCurrent._sld1.HideMenus();
- //BA.debugLineNum = 167;BA.debugLine="End Sub";
+ //BA.debugLineNum = 188;BA.debugLine="Sub btn_Home_Slidebar_Click";
+ //BA.debugLineNum = 189;BA.debugLine="sld1.HideMenus";
+mostCurrent._vvvvv2.HideMenus();
+ //BA.debugLineNum = 190;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_lastdefinitionaccessibility_slidebar_click() throws Exception{
- //BA.debugLineNum = 169;BA.debugLine="Sub btn_LastDefinitionAccessibility_SlideBar_Click";
- //BA.debugLineNum = 170;BA.debugLine="Definition_Permissions_ACT.Current_Tab=0";
+ //BA.debugLineNum = 192;BA.debugLine="Sub btn_LastDefinitionAccessibility_SlideBar_Click";
+ //BA.debugLineNum = 193;BA.debugLine="Definition_Permissions_ACT.Current_Tab=0";
 mostCurrent._definition_permissions_act._current_tab = (int) (0);
- //BA.debugLineNum = 171;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
+ //BA.debugLineNum = 194;BA.debugLine="StartActivity(Definition_Permissions_ACT)";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._definition_permissions_act.getObject()));
- //BA.debugLineNum = 172;BA.debugLine="Activity.Finish()";
+ //BA.debugLineNum = 195;BA.debugLine="Activity.Finish()";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 173;BA.debugLine="End Sub";
+ //BA.debugLineNum = 196;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="Sub Globals";
  //BA.debugLineNum = 12;BA.debugLine="Dim sld1 As SlidingMenu";
-mostCurrent._sld1 = new anywheresoftware.b4a.objects.SlidingMenuWrapper();
+mostCurrent._vvvvv2 = new anywheresoftware.b4a.objects.SlidingMenuWrapper();
  //BA.debugLineNum = 15;BA.debugLine="Private lbl_Strip As Label";
 mostCurrent._lbl_strip = new anywheresoftware.b4a.objects.LabelWrapper();
  //BA.debugLineNum = 16;BA.debugLine="Private lbl_Toolbar As Label";
@@ -686,10 +704,10 @@ mostCurrent._main_panel = new anywheresoftware.b4a.objects.PanelWrapper();
 return "";
 }
 public static String  _lbl_toolbar_click() throws Exception{
- //BA.debugLineNum = 125;BA.debugLine="Sub lbl_Toolbar_Click";
- //BA.debugLineNum = 126;BA.debugLine="sld1.ShowMenu";
-mostCurrent._sld1.ShowMenu();
- //BA.debugLineNum = 127;BA.debugLine="End Sub";
+ //BA.debugLineNum = 145;BA.debugLine="Sub lbl_Toolbar_Click";
+ //BA.debugLineNum = 146;BA.debugLine="sld1.ShowMenu";
+mostCurrent._vvvvv2.ShowMenu();
+ //BA.debugLineNum = 147;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{

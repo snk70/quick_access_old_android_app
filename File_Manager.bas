@@ -27,9 +27,9 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	If Rnd(0,10)=0 Then
-		StartService(check_servis)
-	End If
+'	If Rnd(0,10)=0 Then
+'		StartService(check_servis)
+'	End If
 	'''''''''''''''''''''''''''''''''''''''''''''''
 	Activity.LoadLayout("list")
 
@@ -102,7 +102,7 @@ Sub Share
 End Sub
 
 Sub OpenFileOrFolder
-Msgbox(LastFileClicked,"")
+'Msgbox(LastFileClicked,"")
 	'age item click shode ye directory ya hamun folder bud migim item hae dakhelesh ro
 	'tuye listview namayesh bede
 	If LastFileClicked.IsDirectory Then

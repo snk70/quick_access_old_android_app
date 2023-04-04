@@ -2,7 +2,7 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="Fast_Accessibility.ModernPl"
-	android:versionCode="1"
+	android:versionCode="2"
 	android:versionName="main"
 	android:installLocation="internalOnly">
 	
@@ -80,10 +80,6 @@
 			android:label="دسترسی سه سوته"
 			android:screenOrientation="portrait">
 		</activity>
-		<service android:name=".check_servis">
-		</service>
-		<receiver android:name=".check_servis$check_servis_BR">
-		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"

@@ -1,5 +1,5 @@
 ﻿Version=6.3
-NumberOfModules=17
+NumberOfModules=16
 Module1=Home_Act
 Module2=Definition_Permissions_ACT
 Module3=Installed_Applications
@@ -7,16 +7,15 @@ Module4=Setting_Parts
 Module5=File_Manager
 Module6=Send_Comment_ACT
 Module7=Contact_ACT
-Module8=check_servis
-Module9=Selected_Contact
-Module10=Help_ACT
-Module11=SearchModule
-Module12=Security_Class_List
-Module13=sizeviewV3
-Module14=Regular_Validations
-Module15=size_View
-Module16=Interchange_stn
-Module17=size_View301
+Module8=Selected_Contact
+Module9=Help_ACT
+Module10=SearchModule
+Module11=Security_Class_List
+Module12=sizeviewV3
+Module13=Regular_Validations
+Module14=size_View
+Module15=Interchange_stn
+Module16=size_View301
 Build1=Default,Fast_Accessibility.ModernPl
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~AddPermission(android.permission.READ_CONTACTS)~\n~AddPermission(ir.mservices.market.BILLING)~\n~'SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~'End of default text.~\n~
 IconFile=
@@ -71,7 +70,7 @@ Library11=myketiap
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: دسترسی سه سوته
-	#VersionCode: 1
+	#VersionCode: 2
 	#VersionName: main
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: portrait
@@ -119,45 +118,10 @@ End Sub
 
 
 Sub Activity_Create(FirstTime As Boolean)
-					
-	If Rnd(0,10)=0 Then
-		StartService(check_servis)
-	End If
-	'''''''''''''''''''''''''''''''''''''''''''''''
-				
-	If File.Exists(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)=False And File.Exists(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)=False Then
+							File.MakeDir(File.DirInternal,"fsaccs")
 
-		'Load loyout
-		Activity.LoadLayout("Pay_Port_Loyout")
-		size_View301.SetPX(Activity.Width,Activity.Height,240,320)
-		size_View301.SetPastScreenSizetoInche(3.333,4.444)
-		size_View301.SetSize_lbl_Views(lbl_1,18,15,30,207,14)
-		size_View301.SetSize_lbl_Views(lbl_2,54,15,40,207,14)
-		size_View301.SetSize_btn(btn_buy,107,32,176,29,10)
-		size_View301.SetSize_btn(btn_clip,147,32,176,29,10)
-		size_View301.SetSize_btn(btn_Exit,188,32,176,29,10)
-		rn=Rnd(0,10000)
-		
-				
-	Else If File.Exists(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)=True And File.Exists(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)=True Then
-		StartService(check_servis)
-		'تست صحت لایسنس ها
-					
-		rn=(File.GetText(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)-3)/2
-		
-		If Rnd(0,3)=0 Then
-			StartActivity(Home_Act)
-			StartService(check_servis)
-			Activity.Finish
-		Else
-			StartActivity(Home_Act)
-			Activity.Finish
-		End If
-				
-	Else
-		HandWork_Licence
-	End If
-					
+StartActivity(Home_Act)
+Activity.Finish	
 
 End Sub
 
@@ -188,12 +152,12 @@ Sub Create_HardLicence(Rand_Number As String,P_Serial) As String
 
 End Sub
 
-Sub HandWork_Licence
-	Msgbox("لایسنس امنیتی نرم افزار دستکاری شده","مشکل امنیتی")
-	File.Delete(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)
-	File.Delete(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)
-	ExitApplication
-End Sub
+'Sub HandWork_Licence
+'	Msgbox("لایسنس امنیتی نرم افزار دستکاری شده","مشکل امنیتی")
+'	File.Delete(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f)
+'	File.Delete(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f)
+'	ExitApplication
+'End Sub
 
 ''''''رمز نگاری 
 
@@ -1075,21 +1039,21 @@ Sub JobDone(Job As HttpJob)
 '	ProgressDialogHide
 
 
-	If Job.Success Then
-
-		If Job.JobName="check_ht" And Job.GetString2("ASCII")<>"" Then
-			
-			If Job.GetString2("ASCII").Replace("?","")=ch_sign.sha1.Replace(":","").ToLowerCase Then
-				b_mark.Initialize("bm",p_Key)
-			Else
-				HandWork_Licence
-			End If
-		End If
-			
-	Else
-		Dim msg_title="خطا",msg_cmt="خطایی در حین خرید نرم افزار به وجود آمده است"&CRLF&CRLF&"لطفا از اتصال به اینترنت و نصب آخرین نسخه نرم افزار بر روی دستگاه خود مطمئن شوید"
-		Msgbox(msg_cmt,msg_title)
-	End If
+'	If Job.Success Then
+'
+'		If Job.JobName="check_ht" And Job.GetString2("ASCII")<>"" Then
+'			
+'			If Job.GetString2("ASCII").Replace("?","")=ch_sign.sha1.Replace(":","").ToLowerCase Then
+'				b_mark.Initialize("bm",p_Key)
+'			Else
+'				HandWork_Licence
+'			End If
+'		End If
+'			
+'	Else
+'		Dim msg_title="خطا",msg_cmt="خطایی در حین خرید نرم افزار به وجود آمده است"&CRLF&CRLF&"لطفا از اتصال به اینترنت و نصب آخرین نسخه نرم افزار بر روی دستگاه خود مطمئن شوید"
+'		Msgbox(msg_cmt,msg_title)
+'	End If
 	
 End Sub
 
@@ -1097,56 +1061,56 @@ End Sub
 
 Sub bm_BillingSupported (Supported As Boolean, Message As String)
 
-	ProgressDialogHide
-
-	If Supported=True Then
-		Dim msl As String=Create_HardLicence(rn,check_servis.pi)
-		b_mark.RequestPayment(P_ID,"inapp",msl.SubString2(0,((msl.Length*2)/10)+7))
-		
-	Else
-			
-		Msgbox("لطفا از نصب آخرین نسخه اپلیکیشن ایران اپس بر روی دستگاه خود مطمئن شوید ، خطای زیر روی داده است :"&CRLF&Message, "خطا")
-		
-	End If
+'	ProgressDialogHide
+'
+'	If Supported=True Then
+'		Dim msl As String=Create_HardLicence(rn,check_servis.pi)
+'		b_mark.RequestPayment(P_ID,"inapp",msl.SubString2(0,((msl.Length*2)/10)+7))
+'		
+'	Else
+'			
+'		Msgbox("لطفا از نصب آخرین نسخه اپلیکیشن ایران اپس بر روی دستگاه خود مطمئن شوید ، خطای زیر روی داده است :"&CRLF&Message, "خطا")
+'		
+'	End If
 End Sub
 
 
 Sub bm_PurchaseCompleted (Success As Boolean, Product As Purchase)
 	
-	Dim msl As String=Create_HardLicence(rn,check_servis.pi)
-	msl=msl.SubString2(0,((msl.Length*2)/10)+7)
-	If Success And Product.DeveloperPayload=msl Then
-		
-			Dim soft_License As String=Create_HardLicence(rn,check_servis.pi)
-        	
-			File.MakeDir(File.DirInternal,check_servis.rnd_Path)
-			File.MakeDir(File.DirInternal,check_servis.lsn_Path)
-			File.WriteString(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f,soft_License.SubString2(0,soft_License.Length/2)&check_servis.vain_text&soft_License.SubString2(soft_License.Length/2,soft_License.Length))
-			File.WriteString(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f,(rn*2)+3)
-        	
-			StartActivity(Home_Act)
-			Activity.Finish
-		
-	Else
-			Msgbox("فرآیند خرید نرم افزار ناموفق بوده است","خطا")
-	End If
+'	Dim msl As String=Create_HardLicence(rn,check_servis.pi)
+'	msl=msl.SubString2(0,((msl.Length*2)/10)+7)
+'	If Success And Product.DeveloperPayload=msl Then
+'		
+'			Dim soft_License As String=Create_HardLicence(rn,check_servis.pi)
+'        	
+'			File.MakeDir(File.DirInternal,check_servis.rnd_Path)
+'			File.MakeDir(File.DirInternal,check_servis.lsn_Path)
+'			File.WriteString(File.DirInternal,check_servis.lsn_Path&"/"&check_servis.lsn_f,soft_License.SubString2(0,soft_License.Length/2)&check_servis.vain_text&soft_License.SubString2(soft_License.Length/2,soft_License.Length))
+'			File.WriteString(File.DirInternal,check_servis.rnd_Path&"/"&check_servis.rnd_f,(rn*2)+3)
+'        	
+'			StartActivity(Home_Act)
+'			Activity.Finish
+'		
+'	Else
+'			Msgbox("فرآیند خرید نرم افزار ناموفق بوده است","خطا")
+'	End If
 	
 End Sub
 
 
 Sub btn_buy_Click
-	ProgressDialogShow2("لطفا کمی صبر کنید ...",False)
-	
-	Dim k1 As SecurityInBilling
-	k1.Initialize
-
-
-		If k1.CheckPatcher = True Then
-			Msgbox("شما از برنامه هک استفاده میکنید و مجاز به خرید نرم افزار نیستید !!","مشکل امنیتی")
-		     HandWork_Licence 
-		Else
-			ht.Initialize("check_ht",Me)
-			ht.PostString(check_servis.WebSite_URL&"/prv/bdsgsdfgsdfg/dsdfgsdfgsdfgsdfgsdfg/sdfgsdfgsdfgsdfg.php","sina=gh&ya_ali=dfgsdf&gsdfgsdf="&check_servis.p_sign)
-		End If
+'	ProgressDialogShow2("لطفا کمی صبر کنید ...",False)
+'	
+'	Dim k1 As SecurityInBilling
+'	k1.Initialize
+'
+'
+'		If k1.CheckPatcher = True Then
+'			Msgbox("شما از برنامه هک استفاده میکنید و مجاز به خرید نرم افزار نیستید !!","مشکل امنیتی")
+'		     HandWork_Licence 
+'		Else
+'			ht.Initialize("check_ht",Me)
+'			ht.PostString(check_servis.WebSite_URL&"/prv/bdsgsdfgsdfg/dsdfgsdfgsdfgsdfgsdfg/sdfgsdfgsdfgsdfg.php","sina=gh&ya_ali=dfgsdf&gsdfgsdf="&check_servis.p_sign)
+'		End If
 End Sub
 

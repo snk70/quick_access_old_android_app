@@ -11,8 +11,8 @@ public static Object getObject() {
     throw new RuntimeException("Code module does not support this method.");
 }
  public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public Fast_Accessibility.ModernPl.main _main = null;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _vvvv4 = null;
+public Fast_Accessibility.ModernPl.main _vvvv5 = null;
 public Fast_Accessibility.ModernPl.home_act _home_act = null;
 public Fast_Accessibility.ModernPl.definition_permissions_act _definition_permissions_act = null;
 public Fast_Accessibility.ModernPl.installed_applications _installed_applications = null;
@@ -20,11 +20,10 @@ public Fast_Accessibility.ModernPl.setting_parts _setting_parts = null;
 public Fast_Accessibility.ModernPl.file_manager _file_manager = null;
 public Fast_Accessibility.ModernPl.send_comment_act _send_comment_act = null;
 public Fast_Accessibility.ModernPl.contact_act _contact_act = null;
-public Fast_Accessibility.ModernPl.check_servis _check_servis = null;
 public Fast_Accessibility.ModernPl.selected_contact _selected_contact = null;
 public Fast_Accessibility.ModernPl.help_act _help_act = null;
-public Fast_Accessibility.ModernPl.searchmodule _searchmodule = null;
-public Fast_Accessibility.ModernPl.sizeviewv3 _sizeviewv3 = null;
+public Fast_Accessibility.ModernPl.searchmodule _vvvv6 = null;
+public Fast_Accessibility.ModernPl.sizeviewv3 _vvvv7 = null;
 public Fast_Accessibility.ModernPl.size_view _size_view = null;
 public Fast_Accessibility.ModernPl.interchange_stn _interchange_stn = null;
 public Fast_Accessibility.ModernPl.size_view301 _size_view301 = null;
